@@ -1,13 +1,19 @@
+<!DOCTYPE html>
 <html>
-function makeid() {
-  var text = "";
-  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+<body>
 
-  for (var i = 0; i < 5; i++)
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
+<p>Click the button to display a random number between 1 and 10.</p>
 
-  return text;
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = Math.floor((Math.random() * 10) + 1);
+    document.getElementById("demo").innerHTML = x;
 }
+</script>
 
-console.log(makeid());
+</body>
 </html>
